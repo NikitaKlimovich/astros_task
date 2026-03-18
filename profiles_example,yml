@@ -1,0 +1,11 @@
+astros_task:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      host: localhost
+      port: 8123
+      user: [ user_name ]
+      password: [ password ]
+      schema: [ schema name ]
+      secure: False
