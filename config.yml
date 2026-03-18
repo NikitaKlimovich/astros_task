@@ -1,0 +1,24 @@
+# astros_task/config.yml
+dbt_settings:
+  profile_name: "dbt_project"
+  target: "local"
+
+source_api:
+  url: "http://api.open-notify.org/astros.json"
+  timeout: 5
+  max_retries: 5
+
+etl_settings:
+  database: "default"
+  
+  raw_table:
+    name: "astros_raw"
+    columns:
+      - "json_data"
+
+  target_table:
+    name: "people"
+    columns:
+      - "name"
+      - "craft"
+      - "_inserted_at"

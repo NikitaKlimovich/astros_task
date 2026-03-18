@@ -9,5 +9,5 @@ SELECT
     JSONExtractString(person, 'craft') AS craft,
     JSONExtractString(person, 'name') AS name,
     now() AS _inserted_at
-FROM astros
+FROM astros_raw
 ARRAY JOIN JSONExtractArrayRaw(json_data, 'people') AS person

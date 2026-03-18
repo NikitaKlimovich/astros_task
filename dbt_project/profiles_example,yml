@@ -1,7 +1,7 @@
-astros_task:
-  target: dev
+dbt_project:
+  target: local
   outputs:
-    dev:
+    local:
       type: clickhouse
       host: localhost
       port: 8123
