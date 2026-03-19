@@ -1,5 +1,4 @@
 import json
-from dotenv import load_dotenv
 import os
 from clickhouse_connect import get_client
 
@@ -7,11 +6,10 @@ from clickhouse_connect import get_client
 Create a connection to clickhouse using .env file
 """
 def get_connection(db_config):
-    load_dotenv()
     return get_client(
         host=db_config['host'], 
-        username=os.getenv('db_user'), 
-        password = os.getenv('db_password'),
+        username=db_config['user'], 
+        password = db_config['password'],
         port=db_config['port']
     )
 

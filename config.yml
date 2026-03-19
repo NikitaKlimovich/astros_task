@@ -1,4 +1,3 @@
-# astros_task/config.yml
 dbt_settings:
   profile_name: "dbt_project"
   target: "local"
