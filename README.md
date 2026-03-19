@@ -30,7 +30,7 @@ Install the necessary Python dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Open your profile_example.yml file in dbt project directory and change "user" and "password" fields to your user and password from clickhouse instance. Then rename it to profile.yml.
+Open your **profile_example.yml** file in dbt project directory and **change "user" and "password" fields** to your username and password from clickhouse instance. Then **rename it to profile.yml**.
 
 ### 3. Initialize dbt
 Navigate to the dbt_project folder and run dbt to create the required tables and views in ClickHouse:
