@@ -3,6 +3,9 @@ from dotenv import load_dotenv
 import os
 from clickhouse_connect import get_client
 
+"""
+Create a connection to clickhouse using .env file
+"""
 def get_connection(db_config):
     load_dotenv()
     return get_client(
@@ -12,6 +15,9 @@ def get_connection(db_config):
         port=db_config['port']
     )
 
+"""
+Insert data into tables and do deduplication
+"""
 def insert_data(client, data, etl_config):
     data_str = json.dumps(data)
     db = etl_config['database']

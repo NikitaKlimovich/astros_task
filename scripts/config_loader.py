@@ -1,17 +1,30 @@
 import os
 import yaml
 
+"""
+Get the main folder of the project
+"""
 def get_main_folder():
     return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
+"""
+Load yml file and return it
+"""
 def load_yaml(path):
     with open(path, 'r') as f:
         return yaml.safe_load(f)
 
+"""
+Get variables from config file
+"""
 def get_full_config(main_folder):
     config_path = os.path.join(main_folder,'config.yml')
     return load_yaml(config_path)
 
+"""
+Get database credentials from profiles.yml
+"""
 def get_db_credentials(main_folder,config):
     dbt_folder = config['dbt_settings']['profile_name']
     dbt_target = config['dbt_settings']['target']

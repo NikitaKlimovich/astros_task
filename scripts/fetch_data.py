@@ -1,6 +1,10 @@
 import requests
 import time
 
+
+""" 
+Extract data from api
+"""
 def fetch_data(api_config):
     url = api_config['url']
     max_retries = api_config['max_retries']
