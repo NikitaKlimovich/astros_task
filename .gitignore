@@ -5,5 +5,5 @@ logs/
 profiles.yml
 .user.yml
 logs
-.env
 __pycache__
+.venv/

@@ -48,8 +48,10 @@ dbt run --profiles-dir .
 Execute the main script from the project root to fetch data from the API and load it into ClickHouse:
 
 ```bash
-# Return to root if you are still in the dbt_project folder
+# Change folder
 cd ..
+
+cd scripts
 
 # Run the ingestion script
 python main.py
