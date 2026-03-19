@@ -1,4 +1,4 @@
-# 🚀 API to ClickHouse Data Pipeline
+# API to ClickHouse Data Pipeline
 
 This project streamlines the process of extracting data from an API and loading it into ClickHouse database using Python and dbt for transformations. The pipeline supports incremental loading, ensuring that only new data is processed during subsequent runs.
 
